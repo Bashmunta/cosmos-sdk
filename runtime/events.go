@@ -50,8 +50,8 @@ func (e Events) EmitKV(_ context.Context, eventType string, attrs ...event.Attri
 	return nil
 }
 
-// EmitNonConsensus emits an typed event that is defined in the protobuf file.
-// In the future these events will be added to consensus.
+// EmitNonConsensus emits a typed event that is defined in the protobuf file.
+// These events are not included in consensus and changing them is not state-machine breaking.
 func (e Events) EmitNonConsensus(_ context.Context, event protoiface.MessageV1) error {
 	return e.EmitTypedEvent(event)
 }
