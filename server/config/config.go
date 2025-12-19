@@ -146,7 +146,7 @@ type GRPCConfig struct {
 	// Enable defines if the gRPC server should be enabled.
 	Enable bool `mapstructure:"enable"`
 
-	// Address defines the API server to listen on
+	// Address defines the gRPC server address to bind to.
 	Address string `mapstructure:"address"`
 
 	// MaxRecvMsgSize defines the max message size in bytes the server can receive.
